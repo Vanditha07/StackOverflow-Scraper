@@ -1,0 +1,33 @@
+ {% extends "base.html" %}
+
+{% block title %}
+<title>Questions</title>
+{% endblock %}
+
+{% block content %}
+<div class="extended-wrapper">
+  <div class="wrapper">
+    <div class="form-wrapper">
+     <form method="POST" action="{{ url_for("questions") }}">
+       <div class="container-form">
+       <label for="tag">Tag</label>
+       <input type="text" id="tag" name="tag" placeholder="" />
+       <br />
+       <br />
+       <label for="questions_count">Number of questions</label>
+       <select id="questions_count" name="questions_count" >
+         <option value="50">50</option>
+         <option value="100">100</option>
+         <option value="150">150</option>
+         <option value="200">200</option>
+         <option value="250">250</option>
+       </select>
+       <br />
+       <br />
+       </div>
+       <input class="submit" type="submit" value="Submit" />
+     </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    {% block title %}
+    {% endblock %}
+
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/e/ef/Stack_Overflow_icon.svg" type="image/x-icon">
+  </head>
+
+  <body>
+    <div class="hero-wrapper">
+      <div class="wrapper">
+        <div class="main-content">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Stack_Overflow_icon.svg" alt="Stack Overflow Icon" width="70px" height="70px" />
+          <h1 id="return_home"><b>Stack Overflow</b></h1>
+          <p class="subtitle">We love people who code</p>
+        </div>
+      </div>
+    </div>
+    {% block content %}
+    {% endblock %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
+  </body>
+</html>
